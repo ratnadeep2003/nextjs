@@ -14,10 +14,10 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "NextJs Practice",
-  description: "practising nextjs",
+  description: "Your architecture project",
 };
 
-export default function RootLayout({
+export default function MarketingLayout({
   children,
 }: {
   children: React.ReactNode;
@@ -28,7 +28,6 @@ export default function RootLayout({
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">
-        <header style={{backgroundColor:'lightblue'}}><p>Header</p></header>
         {children}
         <footer style={{backgroundColor:'lightgreen'}}>Footer</footer>
       </body>

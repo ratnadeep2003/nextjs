@@ -1,3 +1,7 @@
+export const metadata = {
+    title: 'ratnadeep learning nextjs'
+}
+
 export default function  About(){
     return(
         <div>
