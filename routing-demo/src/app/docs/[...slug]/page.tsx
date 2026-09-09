@@ -1,18 +1,20 @@
 export default async function Docs({params}:{
-    params: Promise<{slug: string[]}>
+    params: Promise<{ slug?: string[] }>
 }){
-    const {slug} = await params;
+    // If slug is undefined, default it to an empty array []
+    const { slug = [] } = await params;
+
     if(slug.length === 2){
         return(
             <div>
-                <h2>Viewing features for {slug[0]} and  {slug[1]}</h2>
+                <h2>Viewing features for {slug[0]} and concept {slug[1]}</h2>
             </div>
         )
     }
-    else if(slug.length===1){
+    else if(slug.length === 1){
         return(
             <div>
-                <h2>Viewing deatures for {slug[0]}</h2>
+                <h2>Viewing features for {slug[0]}</h2>
             </div>
         )
     }
